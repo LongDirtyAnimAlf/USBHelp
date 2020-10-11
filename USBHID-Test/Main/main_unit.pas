@@ -142,6 +142,16 @@ begin
       HID_Memo.Lines.Append('ERRORS:');
       HID_Memo.Lines.Append(S);
    end;
+  if datacarrier>0 then
+  begin
+    Detection_Label.Color:=clGreen;
+    Detection_Label.Caption:='Sonelec / PIC18Fx550 USB device detected';
+  end;
+  if datacarrier<0 then
+  begin
+    Detection_Label.Color:=clRed;
+    Detection_Label.Caption:='Sonelec / PIC18Fx550 USB device not detected';
+  end;
 end;
 
 procedure TMain_Form.AppAboutExecute_OnClick(Sender: TObject);
