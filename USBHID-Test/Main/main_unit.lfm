@@ -1,0 +1,748 @@
+object Main_Form: TMain_Form
+  Left = 501
+  Height = 529
+  Top = 204
+  Width = 872
+  Caption = 'USB-HID-Test'
+  ClientHeight = 509
+  ClientWidth = 872
+  Menu = MainMenu
+  OnCreate = MainFormOnCreate
+  OnDestroy = MainForm_OnDestroy
+  OnShow = MainForm_OnShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object PIC2PC_GroupBox: TGroupBox
+    Left = 16
+    Height = 224
+    Top = 256
+    Width = 441
+    BorderSpacing.InnerBorder = 1
+    Caption = ' PIC -> PC  '
+    ClientHeight = 201
+    ClientWidth = 437
+    Font.Height = 18
+    Font.Name = 'Tahoma'
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    object DataInput_Label: TLabel
+      Left = 8
+      Height = 89
+      Top = 96
+      Width = 416
+      AutoSize = False
+      Caption = 'DataInput_Label'
+      Color = 16384
+      Font.Color = clLime
+      Font.Height = -16
+      Font.Name = 'Courier New'
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object Tension_Label: TLabel
+      Left = 8
+      Height = 26
+      Top = 64
+      Width = 72
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '-,-- V'
+      Color = clBlack
+      Font.Color = clAqua
+      Font.Height = 20
+      Font.Name = 'Tahoma'
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object In1_Led: TLed
+      Left = 16
+      Height = 9
+      Top = 16
+      Width = 19
+      BGColor = clSilver
+      BorderColor = clBlack
+      LedOnColor = clRed
+      LedOffColor = 64
+      Border = btSingle
+      BorderMargin = 2
+      LedOn = False
+    end
+    object In2_Led: TLed
+      Left = 48
+      Height = 9
+      Top = 16
+      Width = 19
+      BGColor = clSilver
+      BorderColor = clBlack
+      LedOnColor = clRed
+      LedOffColor = 64
+      Border = btSingle
+      BorderMargin = 2
+      LedOn = False
+    end
+    object In3_Led: TLed
+      Left = 80
+      Height = 9
+      Top = 16
+      Width = 19
+      BGColor = clSilver
+      BorderColor = clBlack
+      LedOnColor = clRed
+      LedOffColor = 64
+      Border = btSingle
+      BorderMargin = 2
+      LedOn = False
+    end
+    object In4_Led: TLed
+      Left = 112
+      Height = 9
+      Top = 16
+      Width = 19
+      BGColor = clSilver
+      BorderColor = clBlack
+      LedOnColor = clRed
+      LedOffColor = 64
+      Border = btSingle
+      BorderMargin = 2
+      LedOn = False
+    end
+    object In5_Led: TLed
+      Left = 144
+      Height = 9
+      Top = 16
+      Width = 19
+      BGColor = clSilver
+      BorderColor = clBlack
+      LedOnColor = clRed
+      LedOffColor = 64
+      Border = btSingle
+      BorderMargin = 2
+      LedOn = False
+    end
+    object In6_Led: TLed
+      Left = 176
+      Height = 9
+      Top = 16
+      Width = 19
+      BGColor = clSilver
+      BorderColor = clBlack
+      LedOnColor = clRed
+      LedOffColor = 64
+      Border = btSingle
+      BorderMargin = 2
+      LedOn = False
+    end
+    object In7_Led: TLed
+      Left = 208
+      Height = 9
+      Top = 16
+      Width = 19
+      BGColor = clSilver
+      BorderColor = clBlack
+      LedOnColor = clRed
+      LedOffColor = 64
+      Border = btSingle
+      BorderMargin = 2
+      LedOn = False
+    end
+    object In8_Led: TLed
+      Left = 240
+      Height = 9
+      Top = 16
+      Width = 19
+      BGColor = clSilver
+      BorderColor = clBlack
+      LedOnColor = clRed
+      LedOffColor = 64
+      Border = btSingle
+      BorderMargin = 2
+      LedOn = False
+    end
+    object In64_Led: TLed
+      Left = 336
+      Height = 9
+      Top = 16
+      Width = 19
+      BGColor = clSilver
+      BorderColor = clBlack
+      LedOnColor = clRed
+      LedOffColor = 64
+      Border = btSingle
+      BorderMargin = 2
+      LedOn = False
+    end
+    object Separateur1_Label: TLabel
+      Left = 272
+      Height = 16
+      Top = 9
+      Width = 50
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '..........'
+      ParentColor = False
+    end
+    object In1_Label: TLabel
+      Left = 16
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '1'
+      ParentColor = False
+    end
+    object In2_Label: TLabel
+      Left = 48
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '2'
+      ParentColor = False
+    end
+    object In3_Label: TLabel
+      Left = 80
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '3'
+      ParentColor = False
+    end
+    object In4_Label: TLabel
+      Left = 112
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '4'
+      ParentColor = False
+    end
+    object In5_Label: TLabel
+      Left = 144
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '5'
+      ParentColor = False
+    end
+    object In6_Label: TLabel
+      Left = 176
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '6'
+      ParentColor = False
+    end
+    object In7_Label: TLabel
+      Left = 208
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '7'
+      ParentColor = False
+    end
+    object In8_Label: TLabel
+      Left = 240
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '8'
+      ParentColor = False
+    end
+    object In64_Label: TLabel
+      Left = 336
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '64'
+      ParentColor = False
+    end
+  end
+  object PC2PIC_GroupBox: TGroupBox
+    Left = 480
+    Height = 224
+    Top = 256
+    Width = 380
+    Caption = ' PC -> PIC  '
+    ClientHeight = 201
+    ClientWidth = 376
+    Font.Height = 18
+    Font.Name = 'Tahoma'
+    ParentFont = False
+    TabOrder = 1
+    object DataOutput_Label: TLabel
+      Left = 8
+      Height = 89
+      Top = 96
+      Width = 360
+      AutoSize = False
+      Caption = 'DataOutput_Label'
+      Color = 16384
+      Font.Color = clLime
+      Font.Height = -16
+      Font.Name = 'Courier New'
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object SW1_Edit: TEdit
+      Left = 8
+      Height = 26
+      Top = 64
+      Width = 25
+      TabOrder = 0
+      Text = 'FF'
+    end
+    object SW2_Edit: TEdit
+      Left = 40
+      Height = 26
+      Top = 64
+      Width = 25
+      TabOrder = 1
+      Text = 'FF'
+    end
+    object SW3_Edit: TEdit
+      Left = 72
+      Height = 26
+      Top = 64
+      Width = 25
+      TabOrder = 2
+      Text = 'FF'
+    end
+    object SW4_Edit: TEdit
+      Left = 104
+      Height = 26
+      Top = 64
+      Width = 25
+      TabOrder = 3
+      Text = 'FF'
+    end
+    object SW5_Edit: TEdit
+      Left = 136
+      Height = 26
+      Top = 64
+      Width = 25
+      TabOrder = 4
+      Text = 'FF'
+    end
+    object SW6_Edit: TEdit
+      Left = 168
+      Height = 26
+      Top = 64
+      Width = 25
+      TabOrder = 5
+      Text = 'FF'
+    end
+    object SW7_Edit: TEdit
+      Left = 200
+      Height = 26
+      Top = 64
+      Width = 25
+      TabOrder = 6
+      Text = 'FF'
+    end
+    object SW8_Edit: TEdit
+      Left = 232
+      Height = 26
+      Top = 64
+      Width = 25
+      TabOrder = 7
+      Text = 'FF'
+    end
+    object SW64_Edit: TEdit
+      Left = 304
+      Height = 26
+      Top = 64
+      Width = 25
+      TabOrder = 8
+      Text = 'FF'
+    end
+    object Out1_Label: TLabel
+      Left = 14
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '1'
+      ParentColor = False
+    end
+    object Out2_Label: TLabel
+      Left = 48
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '2'
+      ParentColor = False
+    end
+    object Out3_Label: TLabel
+      Left = 80
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '3'
+      ParentColor = False
+    end
+    object Out4_Label: TLabel
+      Left = 112
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '4'
+      ParentColor = False
+    end
+    object Out5_Label: TLabel
+      Left = 144
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '5'
+      ParentColor = False
+    end
+    object Out6_Label: TLabel
+      Left = 176
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '6'
+      ParentColor = False
+    end
+    object Out7_Label: TLabel
+      Left = 208
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '7'
+      ParentColor = False
+    end
+    object Out8_Label: TLabel
+      Left = 240
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '8'
+      ParentColor = False
+    end
+    object Out64_Label: TLabel
+      Left = 304
+      Height = 21
+      Top = 32
+      Width = 19
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '64'
+      ParentColor = False
+    end
+    object Out1_Switch: TSwitch
+      Left = 8
+      Height = 26
+      Top = 9
+      Width = 26
+      SwitchStyle = ssPushButton
+      BGColor = clBtnFace
+      BorderColor = clBlack
+      ButtonBorderColor = clBlack
+      DisabledColor = clSilver
+      LitOnColor = clLime
+      LitOffColor = clGreen
+      Border = btRaised
+      ButtonBorder = btRaised
+      HorzMargin = 3
+      VertMargin = 3
+      SwitchOn = False
+      Orientation = soVertical
+    end
+    object Out2_Switch: TSwitch
+      Left = 41
+      Height = 26
+      Top = 9
+      Width = 26
+      SwitchStyle = ssPushButton
+      BGColor = clBtnFace
+      BorderColor = clBlack
+      ButtonBorderColor = clBlack
+      DisabledColor = clSilver
+      LitOnColor = clLime
+      LitOffColor = clGreen
+      Border = btRaised
+      ButtonBorder = btRaised
+      HorzMargin = 3
+      VertMargin = 3
+      SwitchOn = False
+      Orientation = soVertical
+    end
+    object Out3_Switch: TSwitch
+      Left = 73
+      Height = 26
+      Top = 9
+      Width = 26
+      SwitchStyle = ssPushButton
+      BGColor = clBtnFace
+      BorderColor = clBlack
+      ButtonBorderColor = clBlack
+      DisabledColor = clSilver
+      LitOnColor = clLime
+      LitOffColor = clGreen
+      Border = btRaised
+      ButtonBorder = btRaised
+      HorzMargin = 3
+      VertMargin = 3
+      SwitchOn = False
+      Orientation = soVertical
+    end
+    object Out4_Switch: TSwitch
+      Left = 105
+      Height = 26
+      Top = 9
+      Width = 26
+      SwitchStyle = ssPushButton
+      BGColor = clBtnFace
+      BorderColor = clBlack
+      ButtonBorderColor = clBlack
+      DisabledColor = clSilver
+      LitOnColor = clLime
+      LitOffColor = clGreen
+      Border = btRaised
+      ButtonBorder = btRaised
+      HorzMargin = 3
+      VertMargin = 3
+      SwitchOn = False
+      Orientation = soVertical
+    end
+    object Out5_Switch: TSwitch
+      Left = 137
+      Height = 26
+      Top = 9
+      Width = 26
+      SwitchStyle = ssPushButton
+      BGColor = clBtnFace
+      BorderColor = clBlack
+      ButtonBorderColor = clBlack
+      DisabledColor = clSilver
+      LitOnColor = clLime
+      LitOffColor = clGreen
+      Border = btRaised
+      ButtonBorder = btRaised
+      HorzMargin = 3
+      VertMargin = 3
+      SwitchOn = False
+      Orientation = soVertical
+    end
+    object Out6_Switch: TSwitch
+      Left = 169
+      Height = 26
+      Top = 9
+      Width = 26
+      SwitchStyle = ssPushButton
+      BGColor = clBtnFace
+      BorderColor = clBlack
+      ButtonBorderColor = clBlack
+      DisabledColor = clSilver
+      LitOnColor = clLime
+      LitOffColor = clGreen
+      Border = btRaised
+      ButtonBorder = btRaised
+      HorzMargin = 3
+      VertMargin = 3
+      SwitchOn = False
+      Orientation = soVertical
+    end
+    object Out7_Switch: TSwitch
+      Left = 201
+      Height = 26
+      Top = 9
+      Width = 26
+      SwitchStyle = ssPushButton
+      BGColor = clBtnFace
+      BorderColor = clBlack
+      ButtonBorderColor = clBlack
+      DisabledColor = clSilver
+      LitOnColor = clLime
+      LitOffColor = clGreen
+      Border = btRaised
+      ButtonBorder = btRaised
+      HorzMargin = 3
+      VertMargin = 3
+      SwitchOn = False
+      Orientation = soVertical
+    end
+    object Out8_Switch: TSwitch
+      Left = 233
+      Height = 26
+      Top = 9
+      Width = 26
+      SwitchStyle = ssPushButton
+      BGColor = clBtnFace
+      BorderColor = clBlack
+      ButtonBorderColor = clBlack
+      DisabledColor = clSilver
+      LitOnColor = clLime
+      LitOffColor = clGreen
+      Border = btRaised
+      ButtonBorder = btRaised
+      HorzMargin = 3
+      VertMargin = 3
+      SwitchOn = False
+      Orientation = soVertical
+    end
+    object Out64_Switch: TSwitch
+      Left = 297
+      Height = 26
+      Top = 8
+      Width = 26
+      SwitchStyle = ssPushButton
+      BGColor = clBtnFace
+      BorderColor = clBlack
+      ButtonBorderColor = clBlack
+      DisabledColor = clGreen
+      LitOnColor = clLime
+      LitOffColor = clGreen
+      Border = btRaised
+      ButtonBorder = btRaised
+      HorzMargin = 3
+      VertMargin = 3
+      SwitchOn = False
+      Orientation = soVertical
+      Enabled = False
+    end
+  end
+  object Top_Label: TLabel
+    Left = 16
+    Height = 20
+    Top = 8
+    Width = 227
+    AutoSize = False
+    Caption = 'Périphériques HID détectés :'
+    Font.Height = 24
+    ParentColor = False
+    ParentFont = False
+  end
+  object Enumeration_Button: TButton
+    Left = 16
+    Height = 33
+    Top = 216
+    Width = 163
+    Caption = 'Forcer énumération'
+    Font.Height = 20
+    OnClick = EmunerationOnClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 486
+    Width = 872
+    Panels = <>
+  end
+  object Detection_Label: TLabel
+    Left = 360
+    Height = 32
+    Top = 217
+    Width = 500
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Equipement USB "Sonelec / PIC18Fx550" non détecté'
+    Color = clRed
+    Font.Color = clWindowText
+    Font.Height = 21
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object HID_Memo: TMemo
+    Left = 16
+    Height = 163
+    Top = 39
+    Width = 844
+    Lines.Strings = (
+      'HID_Memo'
+    )
+    ScrollBars = ssAutoVertical
+    TabOrder = 4
+  end
+  object MainMenu: TMainMenu
+    Left = 104
+    Top = 48
+    object Fichier: TMenuItem
+      Caption = 'Fichier'
+      object Quitter: TMenuItem
+        Action = AppClose_Action
+      end
+    end
+    object Aide: TMenuItem
+      Caption = 'Aide'
+      object MenuItem2: TMenuItem
+        Caption = 'Index de l''Aide'
+      end
+      object MenuItem3: TMenuItem
+        Caption = '--------'
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Liser-moi'
+      end
+      object MenuItem5: TMenuItem
+        Caption = '--------------'
+      end
+      object MenuItem6: TMenuItem
+        Action = AppAboutExecute_Action
+        Caption = 'A propos ...'
+        OnClick = AppAboutExecute_OnClick
+      end
+    end
+  end
+  object ActionList: TActionList
+    Left = 216
+    Top = 48
+    object AppClose_Action: TAction
+      Caption = 'Quitter'
+      HelpType = htKeyword
+      Hint = 'Quitter'
+      OnExecute = AppClose_OnExecute
+    end
+    object AppAboutExecute_Action: TAction
+      Caption = 'AppAboutExecute_Action'
+      OnExecute = AppAboutExecute_OnClick
+    end
+    object Data_Send: TAction
+      Caption = 'Data_Send'
+    end
+  end
+end

@@ -1,0 +1,186 @@
+*****************************************************************************
+*  Remy MALLARD
+*  Copyrights: sonelec-musique.com, Remy Mallard - 2013
+*  http://www.sonelec-musique.com
+*  email: voir page contacts du site sonelec-musique.com
+*  FRANCE
+*****************************************************************************
+*  
+*  03/03/2013
+*  
+*  Version courante du logiciel UsbHidTest:
+*  V1.1.1.0
+*  
+*  Dernière mise à jour du logiciel UsbHidTest.exe : 03/03/2013
+*  Dernière mise à jour de l'aide UsbHidTest       : -
+*  
+*****************************************************************************
+*  FREEWARE 
+*****************************************************************************
+
+
+0 - Infos de dernière minute
+1 - Presentation
+2 - Configuration requise
+3 - Installation
+4 - Mise à jour
+5 - Evolutions du logiciel
+6 - Historique
+7 - Evolutions demandées (en attente ou réalisées)
+8 - Bugs connus
+9 - Droits d'utilisation et copyrights
+
+
+1 - Presentation
+----------------
+Le logiciel UsbHidTest est un logiciel permettant de communiquer de
+façon bilatérale avec un périphérique HID. Il a été spécifiquement 
+développé pour effectuer des tests sur une liaison USB reliant un PC
+avec un périphérique équipé d'un PIC 18F2550 ou 18F4550.
+
+Le fichier A_lire.txt que vous lisez actuellement, peut contenir des
+informations de dernière minute non incluses dans le fichier d'aide du 
+logiciel UsbHidTest (si ce dernier existe). Pour cette raison, il est 
+fortement conseillé de le lire avant d'utiliser le logiciel (autant pour 
+une première installation que pour une mise à jour).
+
+Copyrights: SONELEC-MUSIQUE, Remy Mallard - 2013
+http://www.sonelec-musique.com/logiciels_freewares_usbhidtest.html
+
+
+2 - Configuration requise
+-------------------------
+
+WinXP-SP2 / Vista / Seven
+Souris fortement conseillée
+
+                          Minimum       Conseillé
+Espace disque dur :       10 MO         30 MO
+RAM :                     512 MO        1024 MO
+Vitesse uP :              800 MHz       1,6 GHz
+Résolution écran :        640 x 480     800 x 600
+
+
+3 - Installation complète (pour une mise à jour, voir paragraphe 4)
+-------------------------------------------------------------------
+3.a - Installation depuis l'archive UsbHidTest_Files_V_x_x_x_x.zip
+---------------------------------------------------------------------
+L'archive UsbHidTest_Files_V_x_x_x_x.zip contient les fichiers en
+version "non installables". Ils vous suffit de décompresser et placer
+l'ensemble de ces fichiers dans le répertoire de votre choix, et de
+double-cliquer sur le fichier executable UsbHidTest.exe pour lancer
+le programme. Vous pouvez bien sûr ajouter un raccourci sur le bureau
+de Windows afin de simplifier les démarrages ultérieurs du logiciel.
+
+
+3.b - Installation depuis l'archive UsbHidTest_Install_V_x_x_x_x.zip
+-----------------------------------------------------------------------
+L'archive UsbHidTest_Install_V_x_x_x_x.zip contient les fichiers en
+version "installables". Ils vous suffit de décompresser et placer
+l'ensemble de ces fichiers dans un répertoire temporaire de votre choix,
+et de double-cliquer sur le fichier executable setup.exe pour lancer
+le programme d'installation. Reste ensuite à répondre aux diverses 
+questions demandées afin d'effectuer l'installation définitive. 
+Remarque : le logiciel d'installation ajoute une entrée à la liste des
+programmes installés, ce qui vous permettra de désinstaller le logiciel
+selon la procédure normale de désinstallation de Windows.
+
+
+4 - Mise à jour (uniquement si l'installation complète a déjà été effectuée)
+---------------------------------------------------------------------------
+Vous pouvez mettre à jour la version de votre logiciel UsbHidTest.exe
+si ce dernier possède un numéro de version anterieur au numéro de
+version de la dernière version disponible.
+La dernière version disponible est indiquée au début du paragraphe
+"8 - Historique" du fichier A_Lire.txt joint au programme.
+Pour connaitre la version actuellement installée sur votre PC, vous
+avez deux solutions:
+1 - Lancer le programme UsbHidTest et consulter l'information de version
+donnée dans la boite de dialogue "A propos".
+2 - Dans le gestionnaire de fichier de Windows, cliquer une fois sur le
+fichier "UsbHidTest.exe" avec le bouton gauche de la souris pour le 
+sélectionner, puis cliquer une fois avec le bouton droit de la souris
+et utiliser la commande "Propriétés" pour afficher les informations de
+version du fichier.
+Ces deux méthodes donnent la même information de version.
+
+La procédure d'installation de la mise à jour consiste simplement à remplacer 
+les anciens fichiers par les nouveaux fichiers quand ils portent le même nom.
+Par exemple, si les seuls fichiers UsbHidTest.exe, UsbHidTest.hlp et
+A_Lire.txt vous ont été fournis dans une archive appelée
+UsbHidTest_Update_V_x_x_x.zip, vous effectuerez la mise à jour en ne 
+remplaçant que ces fichiers.
+
+
+5 - Evolutions du logiciel
+--------------------------
+Toute demande d'évolution, de modification ou de correction, sera prise en 
+compte. Afin de gérer correctement l'évolution du logiciel UsbHidTest, le 
+paragraphe "Evolutions demandées" du fichier A_lire.txt (celui que vous 
+lisez actuellement) comportera vos demandes. Les demandes traitées 
+apparaitront dans le paragraphe "Historique" de ce même fichier A_lire.txt.
+Remarque : le suivi ne sera pas forcément assuré de façon systématique et 
+dans des délais courts.
+
+
+6 - Historique
+--------------
+03/03/2013 - V1.1.1.0
+- Suppression des doublons dans la liste des périphériques détectés.
+
+20/01/2013 - V1.1.0.0
+- Ajout possibilité d'envoyer des infos plus détaillées du PC vers le PIC
+(n'importe quelle valeur comprise entre $00 et $FF, au lieu du précédent 
+tout ou rien).
+
+13/01/2013 - V1.0.0.0
+- Première mise à disposition.
+
+
+7 - Evolutions demandées ou prévues (en attente ou réalisées)
+-------------------------------------------------------------
+- Aucune demande pour le moment
+
+{
+EN ATTENTE DE REALISATION.
+IMPLEMENTE le xx/xx/xxxx.
+MODIFIE le xx/xx/xxxx.
+CORRIGE le xx/xx/xxxx.
+}
+
+
+8 - Bugs connus
+----------------
+- Aucun recensé pour le moment.
+
+
+9 - Droits d'utilisation et copyrights
+--------------------------------------
+Le logiciel UsbHidTest est distribué selon le principe du Freeware, 
+ce qui signifie que vous pouvez l'utiliser librement, et ceci dans le 
+cadre d'une utilisation personnelle, sans devoir acquitter une licence 
+payante. 
+
+
+***************************************************************************
+*  
+*  Important !
+*  -----------
+*  Ce logiciel ne dispose pas de support technique. Il ne peut prétendre 
+*  à une utilisation professionnelle. Ce logiciel n'a pas subit de tests 
+*  poussés sur différentes plateformes et sous différents environnement 
+*  (différents OS).
+*  Ce logiciel comporte peut-être des bugs (défauts de conception)
+*  pouvant gêner son utilisation. 
+*  Vous êtes seuls responsables de l'usage que vous en ferez !!!
+*  
+***************************************************************************
+
+
+--------------
+
+Pour tout renseignements complémentaires, n'hésitez pas à me contacter.
+
+Rémy Mallard
+http://www.sonelec-musique.com
+adresse mail sur page "Contacts"
