@@ -1,7 +1,7 @@
 object Main_Form: TMain_Form
-  Left = 501
+  Left = 389
   Height = 529
-  Top = 204
+  Top = 167
   Width = 872
   Caption = 'USB-HID-Test'
   ClientHeight = 509
@@ -9,7 +9,6 @@ object Main_Form: TMain_Form
   Menu = MainMenu
   OnCreate = MainFormOnCreate
   OnDestroy = MainForm_OnDestroy
-  OnShow = MainForm_OnShow
   Position = poScreenCenter
   LCLVersion = '2.1.0.0'
   object PIC2PC_GroupBox: TGroupBox

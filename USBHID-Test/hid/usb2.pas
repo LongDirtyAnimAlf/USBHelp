@@ -20,7 +20,7 @@ const
 type
   TReport = packed record
     ReportID: byte;
-    Data:    array [0..15] of byte; // <-- this needs to be adapted to your report size
+    Data:    array [0..63] of byte; // <-- this needs to be adapted to your report size
   end;
 
   TUSBController = class
@@ -115,6 +115,8 @@ uses
   StrUtils;
 
 const
+  //Vendor                        = $04D8;
+  //Product                       = $003F;
   Vendor                        = $045E;
   Product                       = $0916;
 

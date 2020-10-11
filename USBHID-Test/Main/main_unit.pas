@@ -89,16 +89,16 @@ type
     procedure EmunerationOnClick(Sender: TObject);
     procedure MainFormOnCreate(Sender: TObject);
     procedure MainForm_OnDestroy(Sender: TObject);
-    procedure MainForm_OnShow(Sender: TObject);
   private
     { private declarations }
     NewUSB:TUSB;
-    procedure UpdateUSBDevice(Sender: TObject;datacarrier:integer);
+    procedure UpdateUSBDevice({%H-}Sender: TObject;datacarrier:integer);
+    procedure InitHID({%H-}Data: PtrInt=0);
     procedure DataRead;
     procedure DataSend;
   public
     { public declarations }
-    procedure Hid_Reset(bPM: Boolean);
+    procedure Hid_Reset({%H-}bPM: Boolean);
 
   end;
 
@@ -118,43 +118,30 @@ implementation
 
 procedure TMain_Form.MainFormOnCreate(Sender: TObject);
  begin
-   //
- end;
-
-
-
-procedure TMain_Form.MainForm_OnShow(Sender: TObject);
- var
-   S:string;
- begin
    Hid_Reset(true);
    HID_Memo.Lines.Append('HID Created.');
    NewUSB:=TUSB.Create;
    NewUSB.OnUSBDeviceChange:=UpdateUSBDevice;
    HID_Memo.Lines.Append('Ready.');
-   S:=NewUSB.Info;
-   if Length(S)>0 then
-     begin
-       HID_Memo.Lines.Append('INFO:');
-       HID_Memo.Lines.Append(S);
-     end;
-   S:=NewUSB.Errors;
-   if Length(S)>0 then
-     begin
-       HID_Memo.Lines.Append('ERRORS:');
-       HID_Memo.Lines.Append(S);
-    end;
+   Application.QueueAsyncCall(InitHID,0);//
  end;
-
-
-
-
 
 procedure TMain_Form.UpdateUSBDevice(Sender: TObject;datacarrier:integer);
 var
   S:string;
 begin
-  //
+  S:=NewUSB.Info;
+  if Length(S)>0 then
+    begin
+      HID_Memo.Lines.Append('INFO:');
+      HID_Memo.Lines.Append(S);
+    end;
+  S:=NewUSB.Errors;
+  if Length(S)>0 then
+    begin
+      HID_Memo.Lines.Append('ERRORS:');
+      HID_Memo.Lines.Append(S);
+   end;
 end;
 
 procedure TMain_Form.AppAboutExecute_OnClick(Sender: TObject);
@@ -209,6 +196,12 @@ procedure TMain_Form.Hid_Reset(bPM: Boolean);
     DataInput_Label.Caption := '<No data>';
     DataOutput_Label.Caption := '<No data>';
 
+  end;
+
+procedure TMain_Form.InitHID(Data: PtrInt);
+  begin
+    UpdateUSBDevice(nil,0);
+    NewUSB.Enabled:=True;
   end;
 
 end.
