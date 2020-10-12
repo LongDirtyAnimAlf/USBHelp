@@ -119,10 +119,10 @@ uses
   StrUtils;
 
 const
-  Vendor                        = $04D8;
-  Product                       = $003F;
-  //Vendor                        = $045E;
-  //Product                       = $0916;
+  //Vendor                        = $04D8;
+  //Product                       = $003F;
+  Vendor                        = $045E;
+  Product                       = $0916;
 
   ErrorDelay                    = 100;
   USBTimeout                    = 200;
