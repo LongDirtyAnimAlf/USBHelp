@@ -168,15 +168,14 @@ procedure TMain_Form.EmunerationOnClick(Sender: TObject);
   var
     S:string;
   begin
+    NewUSB.Enumerate;
     S:=NewUSB.Info;
-      if Length(S)>0 then
-        begin
-          HID_Memo.Lines.Append('INFO:');
-          HID_Memo.Lines.Append(S);
-        end
-      else
-          HID_Memo.Lines.Append('No new USB info.');
-end;
+    if Length(S)>0 then
+      begin
+        HID_Memo.Lines.Append('INFO:');
+        HID_Memo.Lines.Append(S);
+      end;
+  end;
 
 procedure TMain_Form.MainForm_OnDestroy(Sender: TObject);
   begin
@@ -210,7 +209,6 @@ procedure TMain_Form.Hid_Reset(bPM: Boolean);
 
 procedure TMain_Form.InitHID(Data: PtrInt);
   begin
-    UpdateUSBDevice(nil,0);
     NewUSB.Enabled:=True;
   end;
 
